@@ -1,0 +1,13 @@
+<!-- app/views/doctors/new.html.erb -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mb-4">Register Doctor</h2>
+      <%= form_with model: @doctor, url: '../../controllers/doctors_controller', method: :post do |f| %>
+        <%= render 'doctors/form', f: f %>
+        <%= f.submit 'Register Doctor', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
